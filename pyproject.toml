@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "miniradiotools"
+version = "0.1.2"
+authors = [
+  { name="Keito Watanabe"},
+  { name="Jelena Köhler"},
+  { name="Lukas Gülzow"},
+]
+description = "A minature analysis tool for radio emission of air showers."
+readme = "README.md"
+license = {file = "LICENSE"}
+dependencies = [
+  "numpy",
+  "matplotlib",
+  'radiotools'
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest",
+    "pytest-cov",
+]
+
+[project.urls]
+Homepage = "https://github.com/jelenakhlr/miniradiotools"
+Issues = "https://github.com/jelenakhlr/miniradiotools/issues"

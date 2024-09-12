@@ -5,7 +5,7 @@ import matplotlib as mpl
 from matplotlib import rc
 import glob
 from optparse import OptionParser
-import sys
+import os, sys
 
 # mpl setup
 mpl.rcParams['lines.markersize'] = 5
@@ -25,6 +25,10 @@ parser.add_option("--out", "-o", type="str", dest="out",
 
 
 (options, args) = parser.parse_args()
+
+# make sure options.file exists
+if not options.file:
+    raise Exception("Please specify a file.")
 
 # * * * * * * * * * * * * * * * * *
 
