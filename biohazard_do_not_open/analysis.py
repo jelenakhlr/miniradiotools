@@ -71,7 +71,7 @@ if __name__ == '__main__':
         
         # Run coreas_to_hdf5_mods.py
         coreas_to_hdf5 = [
-            'python', 'coreas_to_hdf5_mods.py', str(reas_filename), '-hl', '--flow', str(flow), '--fhigh', str(fhigh), '--rm13',
+            'python', 'coreas_to_hdf5_mods.py', str(reas_filename), '-hl', '--flow', str(flow), '--fhigh', str(fhigh), # '--rm13',
             "--outputDirectory", str(path_to_reas)
         ]
         subprocess.run(coreas_to_hdf5, check=True)
@@ -136,20 +136,20 @@ if __name__ == '__main__':
             
             # Run coreas_to_hdf5_mods.py
             coreas_to_hdf5 = [
-                'python', 'coreas_to_hdf5_mods.py', str(reas_filename), '-hl', '--flow', str(flow), '--fhigh', str(fhigh), '--rm13',
+                'python', 'coreas_to_hdf5_mods.py', str(reas_filename), '-hl', '--flow', str(flow), '--fhigh', str(fhigh), # '--rm13',
                 "--outputDirectory", str(path_to_reas)
             ]
             subprocess.run(coreas_to_hdf5, check=True)
             print(f"Created {reas_filename}_highlevel.hdf5")
 
             # Run fluencemap_mods.py
-            fluencemap_command = [
-                'python', 'fluencemap_mods.py', str(output_filename_hl), str(obslevel), str(freqband), str(zenith)
-            ]
+            # fluencemap_command = [
+            #     'python', 'fluencemap_mods.py', str(output_filename_hl), str(obslevel), str(freqband), str(zenith)
+            # ]
             # subprocess.run(fluencemap_command, check=True)
-            print(f"Plotted fluencemap for {output_filename_hl}")
+            # print(f"Plotted fluencemap for {output_filename_hl}")
 
-            new_filename = f"SIM{sim_number}.png"
+            # new_filename = f"SIM{sim_number}.png"
 
             # Rename the HDF5 file to the new PNG filename
             # os.rename(output_filename_hl, new_filename)
